@@ -13,7 +13,7 @@ import {
   Typography,
   Divider,
 } from "@mui/material";
-import { Home, LiveTv,  } from "@mui/icons-material";
+import { Home,   } from "@mui/icons-material";
 import PetsIcon from '@mui/icons-material/Pets';
 import { useAppSelector } from "../hooks/redux";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -275,6 +275,12 @@ export default function Sidebar({ expanded }: SidebarProps) {
           justifyContent: "center",
           transition: "width 0.3s ease",
           overflowX: "hidden",
+                // THE FIX:
+          m: 1,                       // <- visible margin around the drawer
+          borderRadius: "20px",       // <- rounded corners visible on screen
+          height: "calc(100vh - 16px)", // <- take margin into account (MUI spacing 1 = 8px)
+          overflow: "hidden",         // <- keep inner content clipped to rounded corners
+          backgroundClip: "padding-box" // <- help with background bleeding on radius
         },
       }}
     >

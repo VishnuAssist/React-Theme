@@ -22,7 +22,8 @@ export default function Layout({ children, onSearch }: LayoutProps) {
         display: "flex",
         minHeight: "100vh",
         bgcolor: "background.default",
-        
+           pl: 1, // ✅ overall padding (instead of individual margins)
+        boxSizing: "border-box",
       }}
     >
       <Sidebar expanded={sidebarExpanded} />
@@ -33,7 +34,7 @@ export default function Layout({ children, onSearch }: LayoutProps) {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          transition: "margin-left 0.3s ease",ml:2
+          transition: "margin-left 0.3s ease",ml:0
         }}
       >
         <Header
@@ -41,7 +42,7 @@ export default function Layout({ children, onSearch }: LayoutProps) {
           onExpandSidebar={handleExpandSidebar}
           sidebarExpanded={sidebarExpanded}
         />
-        <Box sx={{ flexGrow: 1, p: 3 }}>{children}</Box>
+        <Box sx={{ flexGrow: 1, p: 3,bgcolor:"background.paper" ,borderRadius:"20px",m:1,mt:0}}>{children}</Box>
       </Box>
     </Box>
   );
