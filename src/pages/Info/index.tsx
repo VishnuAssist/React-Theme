@@ -1,12 +1,16 @@
+import PageHeader from "../../Components/PageHeader";
+import InfoIcon from "@mui/icons-material/Info";
 
-
-const index = () => {
+const Info = () => {
   return (
     <div>
-      page 1
-      
+      <PageHeader
+        title="Info"
+        description="View app information, updates, and version details."
+        icon={<InfoIcon />}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default Info;

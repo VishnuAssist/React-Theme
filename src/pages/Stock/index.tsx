@@ -1,12 +1,19 @@
+import PageHeader from "../../Components/PageHeader";
+import InventoryIcon from "@mui/icons-material/Inventory";
 
 
-const index = () => {
+const Stock = () => {
   return (
     <div>
-      page 1
-      
+      <PageHeader
+        title="Stock"
+        description="Monitor your stock levels and manage inventory flow."
+        btntitle="Add Stock"
+        icon={<InventoryIcon />}
+        // onActionClick={""}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default Stock;

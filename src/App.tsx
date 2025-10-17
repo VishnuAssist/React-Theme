@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Layout from "./components/Layout"
+import Layout from "./Layouts/Layout"
 import Dashboard from "./pages/Dashboard"
 import MilkEntry from "./pages/MilkEntry"
 import AddProvider from "./pages/AddProvider"
@@ -28,7 +28,7 @@ function App() {
           <Route path="/sale" element={<Sale />} />
           <Route path="/stock" element={<Stock />} />
           <Route path="/payment" element={<Payment />} />
-          <Route path="/summery" element={<Summery />} />
+          <Route path="/Summary" element={<Summery />} />
           <Route path="/info" element={<Info />} />
           <Route path="/expense" element={<Expense />} />
           

@@ -1,22 +1,18 @@
-import { Box } from "@mui/material";
+import PageHeader from "../../Components/PageHeader";
+import HomeIcon from "@mui/icons-material/Home";
 
-
-const Dashboard = () => {
+const index = () => {
   return (
     <div>
-      <Box
-        sx={{
-          p: 1,
-          bgcolor: "background.paper",
-          height: "100hv",
-          display: "flex",
-          flexDirection: "column",width:"100%"
-        }}
-      >
-        Dashboard page content goes here
-      </Box>
+      <PageHeader
+        title="index"
+        description="Plan, prioritize, and accomplish your tasks with ease."
+        btntitle="Add Task"
+        icon={<HomeIcon />}
+        // onActionClick={""}
+      />
     </div>
   );
 };
 
-export default Dashboard;
+export default index;

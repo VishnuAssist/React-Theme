@@ -5,14 +5,17 @@ import { ThemeProvider } from "./contexts/ThemeContext" // Import your custom Th
 import CssBaseline from "@mui/material/CssBaseline"
 import App from "./App.tsx"
 import { store } from "./store/store.ts"
+import { HelmetProvider } from "@dr.pogodin/react-helmet"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+        <HelmetProvider>
     <Provider store={store}>
       <ThemeProvider> {/* Use your custom ThemeProvider */}
         <CssBaseline />
         <App />
       </ThemeProvider>
     </Provider>
+    </HelmetProvider>
   </React.StrictMode>,
 )
