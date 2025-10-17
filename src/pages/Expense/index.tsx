@@ -3,7 +3,7 @@
 const index = () => {
   return (
     <div>
-      page 2
+      page 1
       
     </div>
   )

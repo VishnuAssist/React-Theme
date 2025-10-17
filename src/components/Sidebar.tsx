@@ -13,7 +13,17 @@ import {
   Typography,
   Divider,
 } from "@mui/material";
-import { Home,   } from "@mui/icons-material";
+import {
+  Home,
+  LocalDrink,
+  PersonAdd,
+  ShoppingCart,
+  Inventory,
+  Payment,
+  Assessment,
+  Info,
+  Receipt,
+} from "@mui/icons-material";
 import PetsIcon from '@mui/icons-material/Pets';
 import { useAppSelector } from "../hooks/redux";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -24,16 +34,27 @@ const EXPANDED_SIDEBAR_WIDTH = 200;
 // ✅ Define grouped menu structure
 const navigationSections = [
   {
-    header: "System",
-    items: [{ icon: Home, path: "/", label: "Dashboard" }],
-  },
-  {
-    header: "Settings",
+    header: "Menu",
+
     items: [
-      { icon: Home, path: "/Page1", label: "Page1" },
-      { icon: Home, path: "/Page2", label: "Page2" },
+      { icon: Home, path: "/", label: "Dashboard" },
+      { icon: LocalDrink, path: "/milk-entry", label: "Milk Entry" },
+      { icon: PersonAdd, path: "/add-provider", label: "Add Provider" },
+      { icon: ShoppingCart, path: "/sale", label: "Sale" },
+      { icon: Inventory, path: "/stock", label: "Stock" },
+      { icon: Payment, path: "/payment", label: "Payment" },
+      { icon: Assessment, path: "/summary", label: "Summary" },
+      { icon: Info, path: "/info", label: "Info" },
+      { icon: Receipt, path: "/expense", label: "Expense" },
     ],
   },
+  // {
+  //   header: "Settings",
+  //   items: [
+  //     { icon: Home, path: "/Page1", label: "Page1" },
+  //     { icon: Home, path: "/Page2", label: "Page2" },
+  //   ],
+  // },
 ];
 
 interface SidebarProps {
